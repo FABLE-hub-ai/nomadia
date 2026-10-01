@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Places | Nomadia</title>
+    <meta name="description" content="Explore the best travel destinations and hidden gems curated by Nomadia." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <style>
+      .page-shell {
+        padding: 80px 0 60px;
+      }
+
+      .page-header {
+        margin-bottom: 28px;
+      }
+
+      .page-header h1 {
+        margin: 0;
+        font-size: clamp(2.5rem, 4vw, 4rem);
+        font-family: var(--font-display);
+      }
+
+      .toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        align-items: center;
+        justify-content: space-between;
+        margin: 28px 0 24px;
+      }
+
+      .search-box {
+        flex: 1 1 320px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--bg-elevated);
+        border: 1px solid var(--border-color);
+        border-radius: 14px;
+        padding: 12px 16px;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .search-box input {
+        border: none;
+        outline: none;
+        background: transparent;
+        width: 100%;
+        color: var(--text-primary);
+        font-size: 1rem;
+      }
+
+      .filter-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .filter-select {
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 12px 14px;
+        background: var(--bg-elevated);
+        color: var(--text-primary);
+      }
+
+      .results-summary {
+        margin-bottom: 18px;
+        color: var(--text-secondary);
+        font-weight: 700;
+      }
+
+      .places-list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 26px;
+      }
+
+      .place-card.compact {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .place-card.compact:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 28px 44px rgba(16, 42, 50, 0.12);
+      }
+
+      .place-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .rating {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: rgba(233, 181, 69, 0.12);
+        color: #9d6b06;
+        border-radius: 999px;
+        padding: 7px 10px;
+        font-weight: 700;
+      }
+
+      .place-details {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 12px;
+      }
+
+      .pill {
+        background: rgba(94, 141, 148, 0.1);
+        color: var(--accent-dark);
+        border-radius: 999px;
+        padding: 7px 10px;
+        font-size: 0.75rem;
+        font-weight: 700;
+      }
+
+      @media (max-width: 900px) {
+        .places-list {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .places-list {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand" aria-label="Nomadia home">
+          <img src="images/logo.svg" alt="Nomadia logo" class="brand-logo" />
+          <span>Nomadia</span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="places.html" class="active">Places</a>
+          <a href="guides.html">Guides</a>
+          <a href="about.html">About</a>
+        </nav>
+        <div class="header-actions">
+          <button class="lang-switch" type="button" aria-label="Change language">EN</button>
+          <a href="index.html" class="btn btn-primary">Plan trip</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="container">
+        <header class="page-header">
+          <span class="eyebrow">Curated escapes</span>
+          <h1>Find your next unforgettable place.</h1>
+        </header>
+
+        <div class="toolbar">
+          <label class="search-box" aria-label="Search places">
+            <span>🔎</span>
+            <input id="searchInput" type="text" placeholder="Search destinations, vibes, or regions" />
+          </label>
+
+          <div class="filter-row">
+            <select id="categoryFilter" class="filter-select" aria-label="Filter by category">
+              <option value="all">All categories</option>
+              <option value="Lake">Lake</option>
+              <option value="Highlands">Highlands</option>
+              <option value="Nature">Nature</option>
+              <option value="Culture">Culture</option>
+              <option value="Scenic">Scenic</option>
+              <option value="Remote">Remote</option>
+            </select>
+
+            <select id="priceFilter" class="filter-select" aria-label="Filter by price">
+              <option value="all">Any price</option>
+              <option value="150">Up to $150</option>
+              <option value="200">Up to $200</option>
+              <option value="250">Up to $250</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="resultsSummary" class="results-summary">Showing 0 places</div>
+        <div id="placesGrid" class="places-list" aria-live="polite"></div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <a href="index.html" class="brand footer-brand">
+            <img src="images/logo.svg" alt="Nomadia logo" class="brand-logo" />
+            <span>Nomadia</span>
+          </a>
+          <p>Travel deeper. Discover more.</p>
+        </div>
+        <div class="footer-links">
+          <a href="places.html">Places</a>
+          <a href="guides.html">Guides</a>
+          <a href="about.html">About</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/filter.js"></script>
+  </body>
+</html>
+

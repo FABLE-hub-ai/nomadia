@@ -1,0 +1,12 @@
+:root {
+  --bg-primary: #f5f7f4;
+  --bg-elevated: #ffffff;
+  --text-primary: #162c34;
+  --text-secondary: #536c73;
+  --accent: #5ba7a8;
+  --accent-2: #2c7e89;
+  --accent-dark: #1e5a66;
+  --border-color: rgba(19, 48, 58, 0.12);
+  --font-body: "Manrope", sans-serif;
+  --font-display: "Playfair Display", serif;
+}

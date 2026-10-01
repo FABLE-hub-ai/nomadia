@@ -1,0 +1,68 @@
+{"places":[
+  {
+    "id": 1,
+    "name": "Issyk-Kul",
+    "category": "Lake",
+    "region": "Northern Kyrgyzstan",
+    "price": 180,
+    "rating": 4.8,
+    "description": "A large alpine lake surrounded by mountain villages, beach resorts, and peaceful scenic roads.",
+    "bestFor": ["Relaxation", "Family trip", "Wellness"],
+    "image": "images/places/issyk-kul.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Song-Köl",
+    "category": "Highlands",
+    "region": "Central Kyrgyzstan",
+    "price": 210,
+    "rating": 5.0,
+    "description": "A breathtaking highland lake where you can camp, meet nomads, and enjoy sunrise hikes.",
+    "bestFor": ["Adventure", "Camping", "Photography"],
+    "image": "images/places/song-kol.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Ala-Archa",
+    "category": "Nature",
+    "region": "Near Bishkek",
+    "price": 160,
+    "rating": 4.7,
+    "description": "A dramatic mountain valley with scenic trails, waterfalls, and crisp alpine air.",
+    "bestFor": ["Hiking", "Day trip", "Nature"],
+    "image": "images/places/issyk-kul.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Karakol",
+    "category": "Culture",
+    "region": "Eastern Kyrgyzstan",
+    "price": 220,
+    "rating": 4.9,
+    "description": "A historic town known for its markets, Soviet heritage, and access to mountain routes.",
+    "bestFor": ["Culture", "Food", "Museums"],
+    "image": "images/places/song-kol.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Jeti-Oguz",
+    "category": "Scenic",
+    "region": "Northern mountains",
+    "price": 190,
+    "rating": 4.8,
+    "description": "An iconic red-rock valley with epic views, horse riding, and stay-in-camp experiences.",
+    "bestFor": ["Road trip", "Scenic drive", "Horse riding"],
+    "image": "images/places/issyk-kul.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Lake Oruk",
+    "category": "Remote",
+    "region": "Southwest Kyrgyzstan",
+    "price": 260,
+    "rating": 4.9,
+    "description": "A remote retreat for travelers seeking peace, rugged nature, and star-filled skies.",
+    "bestFor": ["Remote escape", "Wild camping", "Off-grid"],
+    "image": "images/places/song-kol.jpg"
+  }
+}] 

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guide Profile | Nomadia</title>
+    <meta name="description" content="Detailed profile of a local travel guide on Nomadia." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <style>
+      .guide-page {
+        padding: 80px 0 70px;
+      }
+
+      .profile-shell {
+        display: grid;
+        grid-template-columns: 380px 1fr;
+        gap: 34px;
+      }
+
+      .profile-card {
+        background: var(--bg-elevated);
+        border: 1px solid rgba(17, 44, 54, 0.06);
+        border-radius: 30px;
+        overflow: hidden;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .profile-cover {
+        height: 240px;
+        background: linear-gradient(135deg, #dfeff0, #b7d4d7);
+      }
+
+      .profile-body {
+        padding: 24px 24px 28px;
+      }
+
+      .avatar-profile {
+        width: 92px;
+        height: 92px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #d7e8d9, #8bb2a1);
+        border: 5px solid #fff;
+        margin-top: -50px;
+        margin-bottom: 18px;
+      }
+
+      .profile-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .profile-info h1 {
+        margin: 0;
+        font-size: clamp(2rem, 2vw, 2.7rem);
+        font-family: var(--font-display);
+      }
+
+      .specialty-tag {
+        display: inline-flex;
+        background: rgba(94, 141, 148, 0.1);
+        color: var(--accent-dark);
+        border-radius: 999px;
+        padding: 8px 10px;
+        font-size: 0.74rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .profile-card p {
+        margin: 18px 0;
+        color: var(--text-secondary);
+      }
+
+      .stats-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .stats-list li {
+        background: #f5f8f8;
+        border-radius: 16px;
+        padding: 12px 10px;
+        text-align: center;
+      }
+
+      .stats-list strong {
+        display: block;
+        font-size: 1.2rem;
+        margin-bottom: 4px;
+      }
+
+      .profile-content {
+        display: grid;
+        gap: 26px;
+      }
+
+      .panel {
+        background: var(--bg-elevated);
+        border: 1px solid rgba(17, 44, 54, 0.06);
+        border-radius: 26px;
+        padding: 24px 26px;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .panel h2 {
+        margin: 0 0 18px;
+        font-size: 1.7rem;
+      }
+
+      .itinerary {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .itinerary-item {
+        background: #f6f9f8;
+        border-radius: 18px;
+        padding: 18px 16px;
+      }
+
+      .itinerary-item strong {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      @media (max-width: 900px) {
+        .profile-shell,
+        .itinerary {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand" aria-label="Nomadia home">
+          <img src="images/logo.svg" alt="Nomadia logo" class="brand-logo" />
+          <span>Nomadia</span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="places.html">Places</a>
+          <a href="guides.html" class="active">Guides</a>
+          <a href="about.html">About</a>
+        </nav>
+        <div class="header-actions">
+          <button class="lang-switch" type="button" aria-label="Change language">EN</button>
+          <a href="places.html" class="btn btn-primary">Book a guide</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="guide-page">
+      <div class="container profile-shell">
+        <aside class="profile-card">
+          <div class="profile-cover"></div>
+          <div class="profile-body">
+            <div class="avatar-profile"></div>
+            <div class="profile-meta">
+              <div class="profile-info">
+                <h1>Alina Karimova</h1>
+              </div>
+              <span class="specialty-tag">Culture</span>
+            </div>
+            <p>Alina curates immersive city experiences centered on food, design, local history, and unforgettable community stories.</p>
+            <ul class="stats-list">
+              <li><strong>8 yrs</strong><span>Experience</span></li>
+              <li><strong>120+</strong><span>Trips</span></li>
+              <li><strong>4.9</strong><span>Rating</span></li>
+            </ul>
+          </div>
+        </aside>
+
+        <div class="profile-content">
+          <section class="panel">
+            <h2>About</h2>
+            <p>Alina is a storyteller and city guide who helps travelers move beyond tourist checkpoints and experience the living rhythm of a place. Her itineraries mix food traditions, neighborhood walks, and cultural insight.</p>
+          </section>
+
+          <section class="panel">
+            <h2>Popular itinerary</h2>
+            <div class="itinerary">
+              <div class="itinerary-item">
+                <strong>Day 1</strong>
+                Morning market + tea ceremony + local lunch
+              </div>
+              <div class="itinerary-item">
+                <strong>Day 2</strong>
+                Historic streets + artisan workshops + photo route
+              </div>
+              <div class="itinerary-item">
+                <strong>Day 3</strong>
+                Sunset viewpoint + storytelling dinner experience
+              </div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <h2>Specialties</h2>
+            <p>Food tours, city culture, photography walks, private family experiences, and slow-travel itineraries.</p>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <a href="index.html" class="brand footer-brand">
+            <img src="images/logo.svg" alt="Nomadia logo" class="brand-logo" />
+            <span>Nomadia</span>
+          </a>
+          <p>Travel deeper. Discover more.</p>
+        </div>
+        <div class="footer-links">
+          <a href="places.html">Places</a>
+          <a href="guides.html">Guides</a>
+          <a href="about.html">About</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
+

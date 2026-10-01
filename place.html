@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Place Details | Nomadia</title>
+    <meta name="description" content="Detailed view of a featured destination on Nomadia." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <style>
+      .place-page {
+        padding: 80px 0 70px;
+      }
+
+      .place-layout {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 32px;
+        align-items: start;
+      }
+
+      .place-image {
+        height: 520px;
+        border-radius: 30px;
+        background: linear-gradient(135deg, #dfeff0, #b7d4d7);
+        overflow: hidden;
+        box-shadow: var(--shadow-card);
+      }
+
+      .place-content {
+        background: var(--bg-elevated);
+        border: 1px solid rgba(17, 44, 54, 0.06);
+        border-radius: 30px;
+        padding: 28px;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .place-content h1 {
+        margin: 0;
+        font-size: clamp(2.2rem, 3vw, 3.5rem);
+        font-family: var(--font-display);
+      }
+
+      .place-topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin: 18px 0;
+      }
+
+      .place-price {
+        font-size: 1.35rem;
+        font-weight: 800;
+      }
+
+      .place-content p {
+        color: var(--text-secondary);
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        margin: 24px 0;
+      }
+
+      .info-card {
+        background: #f6f9f8;
+        border-radius: 18px;
+        padding: 16px;
+      }
+
+      .info-card span {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--text-secondary);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+
+      .cta-box {
+        margin-top: 26px;
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 900px) {
+        .place-layout {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand" aria-label="Nomadia home">
+          <img src="images/logo.svg" alt="Nomadia logo" class="brand-logo" />
+          <span>Nomadia</span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="places.html" class="active">Places</a>
+          <a href="guides.html">Guides</a>
+          <a href="about.html">About</a>
+        </nav>
+        <div class="header-actions">
+          <button class="lang-switch" type="button" aria-label="Change language">EN</button>
+          <a href="guides.html" class="btn btn-primary">Book a guide</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="place-page">
+      <div class="container place-layout">
+        <div class="place-image" aria-label="Featured destination image"></div>
+
+        <article class="place-content">
+          <span class="eyebrow">Featured location</span>
+          <h1>Song-Köl</h1>
+
+          <div class="place-topbar">
+            <span class="tag">Highlands</span>
+            <span class="place-price">From $210</span>
+          </div>
+
+          <p>Song-Köl is one of the most iconic highland lakes in Kyrgyzstan, offering alpine beauty, nomadic culture, and unforgettable views. It’s ideal for travelers who want a mix of peaceful scenery and immersive local traditions.</p>
+
+          <div class="info-grid">
+            <div class="info-card">
+              <span>Region</span>
+              Central Kyrgyzstan
+            </div>
+            <div class="info-card">
+              <span>Best for</span>
+              Camping, photography, hiking
+            </div>
+            <div class="info-card">
+              <span>Duration</span>
+              2–4 days
+            </div>
+            <div class="info-card">
+              <span>Difficulty</span>
+              Moderate
+            </div>
+          </div>
+
+          <div class="cta-box">
+            <a href="places.html" class="btn btn-primary">Back to places</a>
+            <a href="guide.html" class="btn btn-secondary">Meet local guide</a>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <a href="index.html" class="brand footer-brand">
+            <img src="images/logo.svg" alt="Nomadia logo" class="brand-logo" />
+            <span>Nomadia</span>
+          </a>
+          <p>Travel deeper. Discover more.</p>
+        </div>
+        <div class="footer-links">
+          <a href="places.html">Places</a>
+          <a href="guides.html">Guides</a>
+          <a href="about.html">About</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
+

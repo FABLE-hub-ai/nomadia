@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Nomadia</title>
+    <meta name="description" content="Learn more about Nomadia and our mission to create meaningful, local-first travel experiences." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <style>
+      .about-page {
+        padding: 80px 0 70px;
+      }
+
+      .about-hero {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .about-copy h1 {
+        margin: 0 0 18px;
+        font-size: clamp(2.6rem, 4vw, 4.4rem);
+        font-family: var(--font-display);
+      }
+
+      .about-copy p {
+        margin: 0 0 16px;
+        color: var(--text-secondary);
+        font-size: 1.06rem;
+      }
+
+      .about-image {
+        border-radius: 30px;
+        overflow: hidden;
+        background: linear-gradient(135deg, #dfeff0, #b7d4d7);
+        min-height: 520px;
+        position: relative;
+      }
+
+      .about-image::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(14, 37, 44, 0.1), rgba(14, 37, 44, 0.3));
+      }
+
+      .mission-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+        margin-top: 42px;
+      }
+
+      .mission-card {
+        background: var(--bg-elevated);
+        border: 1px solid rgba(17, 44, 54, 0.06);
+        border-radius: 24px;
+        padding: 24px 20px;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .mission-card h3 {
+        margin: 0 0 10px;
+        font-size: 1.3rem;
+      }
+
+      .mission-card p {
+        margin: 0;
+        color: var(--text-secondary);
+      }
+
+      @media (max-width: 900px) {
+        .about-hero,
+        .mission-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand" aria-label="Nomadia home">
+          <img src="images/logo.svg" alt="Nomadia logo" class="brand-logo" />
+          <span>Nomadia</span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="places.html">Places</a>
+          <a href="guides.html">Guides</a>
+          <a href="about.html" class="active">About</a>
+        </nav>
+        <div class="header-actions">
+          <button class="lang-switch" type="button" aria-label="Change language">EN</button>
+          <a href="places.html" class="btn btn-primary">Start exploring</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="about-page">
+      <div class="container">
+        <section class="about-hero">
+          <div class="about-copy">
+            <span class="eyebrow">Our story</span>
+            <h1>Travel deeper, slower, and with meaning.</h1>
+            <p>Nomadia was created for travelers who want more than a checklist. We believe great journeys come from authentic local experiences, thoughtful planning, and discoveries that stay with you long after the trip ends.</p>
+            <p>We connect curious explorers with carefully selected places, guides, and immersive ideas that reveal a destination through its people, landscapes, and stories.</p>
+          </div>
+          <div class="about-image" aria-label="Traveler in mountain landscape"></div>
+        </section>
+
+        <section class="mission-grid">
+          <article class="mission-card">
+            <h3>Local-first</h3>
+            <p>Every recommendation is curated around real experiences, local knowledge, and cultural depth.</p>
+          </article>
+          <article class="mission-card">
+            <h3>Thoughtful planning</h3>
+            <p>We help travelers build routes that match their pace, interests, and desire for connection.</p>
+          </article>
+          <article class="mission-card">
+            <h3>Meaningful travel</h3>
+            <p>Our mission is to support journeys that are beautiful, sustainable, and unforgettable.</p>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <a href="index.html" class="brand footer-brand">
+            <img src="images/logo.svg" alt="Nomadia logo" class="brand-logo" />
+            <span>Nomadia</span>
+          </a>
+          <p>Travel deeper. Discover more.</p>
+        </div>
+        <div class="footer-links">
+          <a href="places.html">Places</a>
+          <a href="guides.html">Guides</a>
+          <a href="about.html">About</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
